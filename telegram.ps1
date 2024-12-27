@@ -11,7 +11,7 @@ $date = get-date
 
 #write a started status to a text file 
 
-"script started at $date" | Out-File C:\Users\$($env:USERPROFILE)\Documents\status.txt -Append
+"script started at $date" | Out-File $env:USERPROFILE\Documents\status.txt -Append
 
 #checking server up status before checking the service
 $activeDirectory = Test-NetConnection -ComputerName ad -ErrorAction SilentlyContinue 
@@ -95,4 +95,4 @@ else {
 
 #write a ended status to a text file
 
-"script finished running at $date" | Out-File C:\Users\$($env:USERPROFILE)\Documents\status.txt -Append
+"script finished running at $date" | Out-File $env:USERPROFILE\Documents\status.txt -Append
