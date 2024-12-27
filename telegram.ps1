@@ -2,7 +2,8 @@
 Import-Module -Name PoshGram
 
 #telegram bottoken and chat id
-$bottoken = "0000000000000000000000000000"
+$bottoken = $botToken = [System.Environment]::GetEnvironmentVariable('TELEGRAM_BOT_TOKEN', [System.EnvironmentVariableTarget]::User)
+
 $chat_id = "-000000"
 
 #get date 
